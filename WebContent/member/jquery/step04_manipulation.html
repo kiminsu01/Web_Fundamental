@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery Manipulation Demo</title>
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script>
+    $(function(){
+        //$("p").prepend('<strong> Hi!! </strong>');
+        //$('<strong> Hi!! </strong>').prependTo("p")
+        //$("p").append('<strong> Hi!! </strong>');
+        //$('<strong> Hi!! </strong>').appendTo("p");
+        //$("p").after('<strong> Hi!! </strong>');
+        //$("p").before('<strong> Hi!! </strong>');
+
+        //$("p").text("<strong>제이쿼리<strong>");
+        //console.log($("p").text());
+        //$("p").html("<strong>제이쿼리</strong>");
+        //console.log($("p").html());
+        //$("p").wrap("<div></div>");
+
+        //$("p").remove();
+        //$("p").detach();
+        //$("p").remove().text("제이쿼리");
+        $("p").empty().text("제이쿼리");
+
+    })
+    </script>
+    <style>
+        div {
+            border : 1px solid red;
+        }
+        p{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <p>jQuery</p>
+</body>
+</html>

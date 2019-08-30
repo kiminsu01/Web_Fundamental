@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+		
+        $(document).ready(function(){
+        
+            let test;
+            $("#message").keydown(function (key) {
+                if(key.which == 13){
+                        if(test){
+                            eval(test+".removeClass('s')");
+                        }
+                        test = $("#message").val();
+                        eval(test+".addClass('s')");
+                       
+                }
+            });
+            
+            const arrayDiv = $('div');
+            for(let i =0;i<arrayDiv.length;i++){
+                console.log(arrayDiv[i]);
+            }
+    
+            $('div').each( function(value,element) {
+                console.log(value, $(element));
+            });
+    
+            $('div').each( (value,element) => {
+                console.log(value, $(element));
+            });
+            
+        });
+    </script>
+	<style type="text/css">
+		
+		#panel div, #panel ul, #panel li , #header{
+			border : 2px solid rgb(48, 31, 31);
+			margin : 10px;
+			padding : 10px;
+		}
+		#message { 
+		width:98%;
+  		height:auto;
+  		font-size:20px;
+		
+		padding: 14px 10px; 
+		border: 1px solid #999; 
+		
+		}
+
+
+		#panel ul{
+			list-style : none;
+		}
+		
+		#panel .s{
+			border : 2px solid red;
+			background-color : yellow;
+		}
+		.remov{
+			border : 2px solid black;
+			background-color : white;
+		}
+	</style>
+</head>
+<body>
+	<div id="header">
+		<input type="text" id="message" /> 
+	</div>
+	<div id="panel">
+		<div id="root">
+			div id="root""
+			<div id="first">
+				div id="first"
+			</div>
+			<div>
+				div
+				<ul>
+					ul
+					<li>li</li>
+					<li>li</li>
+					<li>li</li>
+					<li>li</li>
+					<li>li</li>
+					<li></li>
+				</ul>
+				<div class="third sung">div class="third sung"</div>
+			</div>
+			<div>div</div>
+			
+		</div>
+	</div>
+	
+    <script type='text/javascript'>
+    /*
+        동적으로 script 코드를 추가하는 방법
+    */
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js";
+    var x = document.getElementsByTagName("script")[0];
+    x.parentNode.insertBefore(s,x);
+    </script>
+
+    
+	
+</body>
+</html>
